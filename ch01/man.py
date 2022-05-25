@@ -3,8 +3,9 @@ class Man:
     """サンプルクラス"""
 
     def __init__(self, name):
-        self.name = name
+        self.name = name #インスタンス変数
         print("Initilized!")
+        #print(name)
 
     def hello(self):
         print("Hello " + self.name + "!")
