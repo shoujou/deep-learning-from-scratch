@@ -4,13 +4,13 @@ sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポ�
 import numpy as np
 from common.layers import *
 from common.gradient import numerical_gradient
-from collections import OrderedDict
+from collections import OrderedDict #順番付きディクショナリ
 
 
 class TwoLayerNet:
 
     def __init__(self, input_size, hidden_size, output_size, weight_init_std = 0.01):
-        # 重みの初期化
+        # 重みの初期化(wight_init_std:ガウス分布のスケール)
         self.params = {}
         self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
@@ -25,7 +25,7 @@ class TwoLayerNet:
 
         self.lastLayer = SoftmaxWithLoss()
         
-    def predict(self, x):
+    def predict(self, x): #推論
         for layer in self.layers.values():
             x = layer.forward(x)
         

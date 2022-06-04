@@ -1,6 +1,6 @@
 # coding: utf-8
 
-
+#乗算レイヤの逆伝搬は入力を一時的に保持する必要あり
 class MulLayer:
     def __init__(self):
         self.x = None

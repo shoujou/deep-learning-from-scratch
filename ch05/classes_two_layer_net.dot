@@ -1,0 +1,5 @@
+digraph "classes_two_layer_net" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{TwoLayerNet|lastLayer\llayers : OrderedDict\lparams : dict\l|accuracy(x, t)\lgradient(x, t)\lloss(x, t)\lnumerical_gradient(x, t)\lpredict(x)\l}", shape="record"];
+}
